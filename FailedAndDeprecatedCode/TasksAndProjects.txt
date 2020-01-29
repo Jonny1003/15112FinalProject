@@ -1,0 +1,67 @@
+*Implement text box interface for active typing
+    -IDE name is MochaViper???
+    -include compile unit button
+    -limit to 40 lines or not??? depending on parse runtime
+        *probably will use a sidescroller
+        *parsing speed primarily limited by expressions
+    -include visulization app
+    -include help bar defining legal Java usage in this IDE
+    -include smart compile button?
+        *Will physically edit base grammar to refit programming style
+        *Program will learn to parse faster, hopefully?????
+        *Copies grammarical strutures appearing inside the
+         program into grammar structures that are ordered by popularity
+         -cuts down on low usage potential structures???
+         -resembles look-ahead parsing with enough user usage
+         -faster recompile times
+    -prints compiled Python code to another box
+        *allows for editing Python code before running in Python IDE
+    -has run function linked to Python IDE that implements program
+        *figure a way to run program from GUI frame/button
+        *controlled via defining a main function in Java implementation
+            -translates to a Python main method for running
+    -Error catching and diagnostic function??
+        *Attach line numbers to tokens for fast diagnostics during comilation
+        *Will alert user of error in parsing at line X, no further diagnostic capabilities
+
+*implement syntax tree visualization
+    -store syntax trees from compilation
+    -can draw both Python and Java syntax trees
+    -include button for drawing syntax tree
+    -stores node attributes in each visual node
+        *user clicks node to get info printed on node
+    -use cmu_112_graphics.py???
+    -separate window from main IDE
+    -sidescrolling or not?
+    
+*implement quick parse tree game
+    -includes 3 levels of difficulty
+    -user must write code in Java that creates 
+     example syntax tree
+    -relink compile or use a game compile widget to 
+     comile code and compare to example
+    -player passes if user tree matches level tree abstractly
+    -implement for both Python and Java side of things
+    -should I create a tutorial??
+    
+*implement extended Java language
+    -current state of parsing and conversion to Python:
+        *all common Java primitives implemented(except byte)
+        *basic array creation implemented
+            -no length translation
+            -array value assignment implemented
+    -deletes variable declarations with no assignment(illegal in Python)
+        *NOT DONE
+    -class and method structures preserved
+    -there will be no static calls???
+        *maybe preserve static vs nonstatic methods in Python code?
+        *implementation will be the same if self is attached to all code?
+    -method call implementations are fishy (probably won't run in Python)...
+    -no imports of any kind implemented
+        *maybe convert the ArrayList, string, math, and random modules?
+    -no Java concatenations of any sort currently
+        *not supported internally by Python
+        *probably will not fix
+    -no casting conversions
+        *should I fix this?
+        
